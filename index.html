@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Browser Prompt Demo</title>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .game-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            min-height: 30px;
+        }
+        .score {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>User Input Display</h1>
-    <p id="output">Click the button to start the prompt...</p>
-    <button onclick="startPrompt()">Start Prompt</button>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="buttons">
+            <button id="rockBtn">Rock</button>
+            <button id="paperBtn">Paper</button>
+            <button id="scissorsBtn">Scissors</button>
+        </div>
+        
+        <div class="result" id="resultMessage"></div>
+        
+        <div class="score">
+            <p id="scoreDisplay">Player: 0 | Computer: 0</p>
+        </div>
+        
+        <button id="resetBtn" style="background-color: #28a745; margin-top: 20px;">Reset Game</button>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 </html>
