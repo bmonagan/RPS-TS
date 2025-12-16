@@ -24,11 +24,17 @@ function playRound(userchoice: Choice, computerChoice: Choice): void {
         console.log("Computer wins, sad!");    
     }}
 
-
+let Round = 1;
 while (playerScore < 5 || compScore < 5) { 
     let playerInput = prompt("Enter Rock, Paper, or Scissors");
     if (playerInput === "Rock" || playerInput === "Paper" || playerInput === "Scissors") {
-        
-
+        let computerInput = computerChoice(Math.floor(Math.random() * 3));
+        playRound(playerInput,computerInput);
+        console.log(`Round: ${Round} Finished`)
+        Round += 1;
+        console.log(`Current Score: Player ${playerScore} Comp: ${compScore}`);
+    }
+    else { 
+        console.log('Please provide a choice that is either Rock, Paper, or Scissors');
     }
 }
